@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "gsap": "npm:@gsap/shockingly@^3.11.3"
+    "gsap": "npm:@gsap/shockingly@^3.11.3",
+    "type": "module"
   }
 }
