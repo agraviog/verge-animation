@@ -1,6 +1,6 @@
-import { gsap } from "https://verge-animation.pages.dev/gsap";
-import { ScrollSmoother } from "https://verge-animation.pages.dev/gsap/ScrollSmoother.js";
-import { ScrollTrigger } from "https://verge-animation.pages.dev/gsap/ScrollTrigger.js";
-import { SplitText } from "https://verge-animation.pages.dev/gsap/SplitText.js";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollSmoother } from "gsap/dist/ScrollSmoother";
+import { SplitText } from "gsap/dist/SplitText";
 
-gsap.registerPlugin(ScrollSmoother, ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
