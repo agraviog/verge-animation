@@ -4,3 +4,4 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, ScrollSmoother);
+console.log("GSAP installed");
