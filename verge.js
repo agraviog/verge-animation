@@ -1,6 +1,6 @@
-import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { ScrollSmoother } from "gsap/dist/ScrollSmoother";
-import { SplitText } from "gsap/dist/SplitText";
+const { gsap } = require("gsap/dist/gsap");
+const { ScrollTrigger } = require("gsap/dist/ScrollTrigger");
+const { ScrollSmoother } = require("gsap/dist/ScrollSmoother");
+const { SplitText } = require("gsap/dist/SplitText");
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
