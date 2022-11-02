@@ -16,17 +16,13 @@ const parentSplit = new SplitText("header h1", {
 // console.log(childSplit)
 const tl = gsap.timeline();
 tl.from(childSplit.lines, {
-  duration: 1.7,
-  yPercent: 100,
+  duration: 1,
+  yPercent: 120,
   ease: "power4.out",
-  stagger: 0.1,
-}).to(
-  childSplit.lines,
-  {
-    duration: 1.7,
-    x: 39,
-    ease: "power4.out",
-    stagger: 0,
-  },
-  "+=1"
-);
+  stagger: 0.2,
+}).to(childSplit.lines, {
+  duration: 1,
+  yPercent: 0,
+  ease: "power4.out",
+  stagger: 0.2,
+});
