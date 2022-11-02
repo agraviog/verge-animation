@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
-let smoother = ScrollSmoother.create({
+const smoother = ScrollSmoother.create({
   smooth: 2,
   effects: true,
 });
@@ -18,11 +18,6 @@ const tl = gsap.timeline();
 tl.from(childSplit.lines, {
   duration: 1,
   yPercent: 120,
-  ease: "power4.out",
-  stagger: 0.2,
-}).to(childSplit.lines, {
-  duration: 1,
-  yPercent: 0,
-  ease: "power4.out",
-  stagger: 0.2,
+  ease: "power1.easeOut",
+  stagger: 0.25,
 });
