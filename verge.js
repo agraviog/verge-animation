@@ -15,8 +15,27 @@ let parentSplit = new SplitText("h1, h2, h3, h4, p", {
   linesClass: "split-parent",
 });
 
-gsap.from(headerSplit.lines, {
+gsap.from(".nav", {
+  delay: 0.5,
+  duration: 0.8,
+  yPercent: -120,
+  opacity: 0,
+  autoAlpha: 0,
+  ease: "Circ.easeOut",
+});
+
+gsap.from(".nav-menu li", {
   delay: 1,
+  duration: 0.8,
+  yPercent: -120,
+  opacity: 0,
+  autoAlpha: 0,
+  ease: "Circ.easeOut",
+  stagger: 0.1,
+});
+
+gsap.from(headerSplit.lines, {
+  delay: 1.2,
   duration: 0.8,
   yPercent: -120,
   opacity: 0,
