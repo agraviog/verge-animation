@@ -1,5 +1,6 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
-ScrollSmoother.create({
-  smooth: 1.5,
+let smoother = ScrollSmoother.create({
+  smooth: 2,
+  effects: true,
 });
