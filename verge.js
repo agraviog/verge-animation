@@ -1,23 +1,89 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 const smoother = ScrollSmoother.create({
-  smooth: 2,
+  smooth: 1.5,
   effects: true,
 });
 
-const childSplit = new SplitText("header h1", {
-  type: "lines, words",
-  linesClass: "split-child",
+let headerSplit = new SplitText("header h1", {
+  type: "lines",
 });
-const parentSplit = new SplitText("header h1", {
+let textSplit = new SplitText("header p", {
+  type: "words",
+});
+let parentSplit = new SplitText("h1, h2, h3, h4, p", {
   linesClass: "split-parent",
 });
 
-// console.log(childSplit)
-const tl = gsap.timeline();
-tl.from(childSplit.lines, {
-  duration: 1,
-  yPercent: 120,
-  ease: "power1.easeOut",
-  stagger: 0.25,
+gsap.from(headerSplit.lines, {
+  delay: 1,
+  duration: 0.8,
+  yPercent: -120,
+  opacity: 0,
+  autoAlpha: 0,
+  ease: "Circ.easeOut",
+  stagger: 0.1,
+  onComplete: () => {
+    headerSplit.revert();
+  },
 });
+
+gsap.from(textSplit.words, {
+  delay: 1.4,
+  duration: 0.8,
+  yPercent: 120,
+  opacity: 0,
+  autoAlpha: 0,
+  ease: "Circ.easeOut",
+  stagger: 0.02,
+  onComplete: () => {
+    textSplit.revert();
+  },
+});
+
+function headingText() {
+  const targetOne = gsap.utils.toArray("section h2");
+  targetOne.forEach((target) => {
+    let splitHeadings = new SplitText(target, { type: "lines" });
+    gsap.from(splitHeadings.lines, {
+      scrollTrigger: {
+        trigger: target,
+        start: "top 75%",
+        end: "bottom center",
+      },
+      duration: 0.75,
+      yPercent: -120,
+      opacity: 0,
+      autoAlpha: 0,
+      ease: "Circ.easeOut",
+      onComplete: () => {
+        splitHeadings.revert();
+      },
+    });
+  });
+}
+headingText();
+
+function bodyText() {
+  const targetTwo = gsap.utils.toArray("section p");
+  targetTwo.forEach((target) => {
+    let splitBody = new SplitText(target, { type: "words" });
+    gsap.from(splitBody.words, {
+      scrollTrigger: {
+        trigger: target,
+        start: "top 75%",
+        end: "bottom center",
+      },
+      duration: 0.75,
+      yPercent: 120,
+      opacity: 0,
+      autoAlpha: 0,
+      ease: "Circ.easeOut",
+      stagger: 0.003,
+      onComplete: () => {
+        splitBody.revert();
+      },
+    });
+  });
+}
+bodyText();
