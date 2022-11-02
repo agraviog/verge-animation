@@ -41,6 +41,19 @@ gsap.from(textSplit.words, {
   },
 });
 
+gsap.from(".home_card-grid li", {
+  scrollTrigger: {
+    trigger: ".home_card-grid li",
+    start: "top 75%",
+  },
+  duration: 1,
+  yPercent: 25,
+  opacity: 0,
+  autoAlpha: 0,
+  ease: "Circ.easeOut",
+  stagger: 0.2,
+});
+
 function headingText() {
   const targetOne = gsap.utils.toArray("section h2");
   targetOne.forEach((target) => {
