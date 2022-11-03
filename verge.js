@@ -25,7 +25,7 @@ gsap.from(".nav", {
 });
 
 gsap.from(".nav-menu li", {
-  delay: 1,
+  delay: 0.5,
   duration: 0.8,
   yPercent: -120,
   opacity: 0,
@@ -35,9 +35,9 @@ gsap.from(".nav-menu li", {
 });
 
 gsap.from(headerSplit.lines, {
-  delay: 1.2,
-  duration: 0.8,
-  yPercent: -120,
+  delay: 1,
+  duration: 0.75,
+  yPercent: 120,
   opacity: 0,
   autoAlpha: 0,
   ease: "Circ.easeOut",
@@ -48,8 +48,8 @@ gsap.from(headerSplit.lines, {
 });
 
 gsap.from(textSplit.words, {
-  delay: 1.4,
-  duration: 0.8,
+  delay: 1.25,
+  duration: 0.75,
   yPercent: 120,
   opacity: 0,
   autoAlpha: 0,
@@ -65,7 +65,7 @@ gsap.from(".home_card-grid li", {
     trigger: ".home_card-grid li",
     start: "top 75%",
   },
-  duration: 1,
+  duration: 0.75,
   yPercent: 25,
   opacity: 0,
   autoAlpha: 0,
@@ -84,7 +84,7 @@ function headingText() {
         end: "bottom center",
       },
       duration: 0.75,
-      yPercent: -120,
+      yPercent: 120,
       opacity: 0,
       autoAlpha: 0,
       ease: "Circ.easeOut",
