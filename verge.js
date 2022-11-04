@@ -16,8 +16,8 @@ let parentSplit = new SplitText("h1, h2, h3, h4, p", {
 });
 
 gsap.from(".nav", {
-  delay: 0.5,
-  duration: 0.75,
+  delay: 0.25,
+  duration: 0.5,
   yPercent: -120,
   opacity: 0,
   autoAlpha: 0,
@@ -25,13 +25,13 @@ gsap.from(".nav", {
 });
 
 gsap.from(".nav-menu li", {
-  delay: 0.5,
-  duration: 0.75,
+  delay: 0.25,
+  duration: 0.5,
   yPercent: -120,
   opacity: 0,
   autoAlpha: 0,
   ease: "Circ.easeOut",
-  stagger: 0.08,
+  stagger: 0.05,
 });
 
 gsap.from(headerSplit.lines, {
