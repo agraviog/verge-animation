@@ -6,5 +6,3 @@ const smoother = ScrollSmoother.create({
   content: "#smooth-content",
   effects: true,
 });
-
-smoother.effects(".smooth-content", { speed: "auto" });
