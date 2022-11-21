@@ -10,11 +10,7 @@ const smoother = ScrollSmoother.create({
 });
 
 smoother.effects(".card-wrapper", {
-  speed: 0.9,
-});
-
-smoother.scrollTrigger({
-  trigger: ".card-wrapper",
+  speed: 1.5,
   start: "top 25%",
   markers: true,
 });
