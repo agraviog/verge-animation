@@ -13,8 +13,8 @@ smoother.effects(".card-wrapper", {
   speed: 0.9,
 });
 
-// ScrollTrigger({
-//   trigger: ".card-wrapper",
-//   start: "top 25%",
-//   markers: true,
-// });
+smoother.ScrollTrigger({
+  trigger: ".card-wrapper",
+  start: "top 25%",
+  markers: true,
+});
