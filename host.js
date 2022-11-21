@@ -10,5 +10,7 @@ const smoother = ScrollSmoother.create({
 });
 
 smoother.effects(".card-wrapper", {
-  speed: 0.5,
+  speed: 0.8,
+  start: "top 25%",
+  markers: true,
 });
