@@ -4,5 +4,7 @@ const smoother = ScrollSmoother.create({
   smooth: 1,
   wrapper: "#smooth-wrapper",
   content: "#smooth-content",
+  normalizeScroll: true,
   effects: true,
+  preventDefault: true,
 });
